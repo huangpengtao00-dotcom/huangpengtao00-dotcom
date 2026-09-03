@@ -17,6 +17,13 @@ make it into the paper. Alongside that, platform engineering on event-sourced ag
   protocol, not by the signal. 48 tests, verifiable synthetic data, offline re-judging.
   / 视觉评估器的证据锚定评测:同一判据在伪 GT 协议下 0.99、真实设定下 0.58。
 
+- [**openagent-harness**](https://github.com/huangpengtao00-dotcom/openagent-harness) ·
+  [**platform backend**](https://github.com/huangpengtao00-dotcom/openagent-platform-backend) —
+  A multi-model coding-agent evaluation stack: isolated workspaces, **patch + pytest acceptance
+  gates**, a failure taxonomy (NoPatch / Unverified / Regression / ScopeViolation), and per-run
+  cost accounting — with a FastAPI control plane for idempotent submission and run history.
+  / coding agent 多模型评测执行器 + 控制面:双重验收门、失败类型学、逐 run 成本追踪。
+
 - [**3d-agent-eval-research**](https://github.com/huangpengtao00-dotcom/3d-agent-eval-research) —
   Evidence-grounded evaluation for 3D-generation agents: immutable evidence bundles with
   integrity checksums, so every verdict points back to third-party re-auditable evidence.

@@ -17,6 +17,15 @@ make it into the paper. Alongside that, platform engineering on event-sourced ag
   protocol, not by the signal. 48 tests, verifiable synthetic data, offline re-judging.
   / 视觉评估器的证据锚定评测:同一判据在伪 GT 协议下 0.99、真实设定下 0.58。
 
+- [**weldcheck**](https://github.com/huangpengtao00-dotcom/weldcheck) —
+  A published watertight ratio can depend more on one undocumented preprocessing switch
+  than on the meshes being measured. STL round-trips move it **+62.5 pp** while
+  topology-carrying formats do not budge, and a three-system leaderboard **fully
+  reverses** — the soundest system ranks last under the evaluation script's own settings.
+  Reproduces with no downloads; ships an AST auditor for finding the same inconsistency
+  in any project.
+  / 一个没人写进论文的预处理开关就能决定公开的几何指标,并让排行榜完全反转。
+
 - [**openagent-harness**](https://github.com/huangpengtao00-dotcom/openagent-harness) ·
   [**platform backend**](https://github.com/huangpengtao00-dotcom/openagent-platform-backend) —
   A multi-model coding-agent evaluation stack: isolated workspaces, **patch + pytest acceptance

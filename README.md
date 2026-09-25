@@ -16,11 +16,13 @@ ops system   148k emails · ~15k SKUs priced · 1,027 orders reconciled at +0.0%
 Public work
 
 ```
+fleetgate           many coding agents, one repo: branches reach main only through a merged-tree gate
+                    Go · 30 incident-replay tests · 11/11 mutations killed · CI on Linux and macOS
+pgplan-cases        PostgreSQL planner traps as plan-shape tests · PG 15 / 16 / 17
 weldcheck           one preprocessing flag moves STL watertight ratio 0% → 62.5% · 33 tests
 restore-rsi         a ten-line baseline beats the self-improving LLM agent
 judge-lab           same visual judge, ρ 0.99 on pseudo-GT vs 0.58 on real data · 48 tests
 memfusion-memory    agent memory · 1st of 50 on one Agent Memory Leaderboard dimension
-openagent-harness   coding-agent evaluation, patch + pytest acceptance
 ```
 
 [opallagent.com](https://opallagent.com) · huangpengtao00@gmail.com

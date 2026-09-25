@@ -1,56 +1,50 @@
-# Hi, I'm Opall Huang 👋
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img alt="Opall Huang — agent systems, evaluation, geometry" src="assets/header-light.svg" width="100%">
+</picture>
 
-I work on **whether agent benchmarks can be trusted** — evaluation validity, the reliability of
-LLM/VLM-as-judge, and the hidden preprocessing assumptions that live in evaluation code but never
-make it into the paper. Alongside that, platform engineering on event-sourced agent runtimes.
+<br>
 
-我做的是 **agent 评测这一侧能不能信**：评测集的有效性、LLM/VLM 评估器的可靠性、
-以及那些只存在于评测代码、却系统性改变公开数字的预处理假设。
-偏好把系统做得可运行、可追踪、可验证，并明确工具与人工审核的边界。
+I build agent systems that hold up under measurement — evaluation readings that can be trusted,
+money that moves exactly once, failures that surface instead of passing as empty results.
 
-## Selected projects / 代表项目
+<sub>做能被验证的 agent 系统。读数可信，钱只动一次，出错就显式报出来。</sub>
 
-- [**judge-lab**](https://github.com/huangpengtao00-dotcom/judge-lab) —
-  Evidence-grounded evaluation of visual reward models. First runnable result: the same
-  histogram judge scores **ρ=0.99** under a self-referential pseudo-GT protocol but only
-  **ρ=0.58** once the reference content differs — traditional metrics are propped up by the
-  protocol, not by the signal. 48 tests, verifiable synthetic data, offline re-judging.
-  / 视觉评估器的证据锚定评测:同一判据在伪 GT 协议下 0.99、真实设定下 0.58。
+<br>
 
-- [**weldcheck**](https://github.com/huangpengtao00-dotcom/weldcheck) —
-  A published watertight ratio can depend more on one undocumented preprocessing switch
-  than on the meshes being measured. STL round-trips move it **+62.5 pp** while
-  topology-carrying formats do not budge, and a three-system leaderboard **fully
-  reverses** — the soundest system ranks last under the evaluation script's own settings.
-  Reproduces with no downloads; ships an AST auditor for finding the same inconsistency
-  in any project.
-  / 一个没人写进论文的预处理开关就能决定公开的几何指标,并让排行榜完全反转。
+### Work
 
-- [**openagent-harness**](https://github.com/huangpengtao00-dotcom/openagent-harness) ·
-  [**platform backend**](https://github.com/huangpengtao00-dotcom/openagent-platform-backend) —
-  A multi-model coding-agent evaluation stack: isolated workspaces, **patch + pytest acceptance
-  gates**, a failure taxonomy (NoPatch / Unverified / Regression / ScopeViolation), and per-run
-  cost accounting — with a FastAPI control plane for idempotent submission and run history.
-  / coding agent 多模型评测执行器 + 控制面:双重验收门、失败类型学、逐 run 成本追踪。
+**Meshy AI** &nbsp;·&nbsp; Agent team, software engineering intern &nbsp;·&nbsp; 2026.07 – 09<br>
+<sub>311 merged pull requests across 6 production repositories · Go / TypeScript / Python · private</sub>
 
-- [**3d-agent-eval-research**](https://github.com/huangpengtao00-dotcom/3d-agent-eval-research) —
-  Evidence-grounded evaluation for 3D-generation agents: immutable evidence bundles with
-  integrity checksums, so every verdict points back to third-party re-auditable evidence.
-  / 把「agent 变好了吗」做成可复现的测量:证据包不可变、判定可回溯。
+- **Geometry kernel for the 3D-printing agent.** Inspect → repair / shell → split with locating pegs →
+  exact-boolean fit → plate arrangement. CPU-only; every command leaves a structured report the agent reads.
+- **Agent evaluation.** Sole author of the verdict-reading layer: releases are compared on pass ↔ fail flips
+  alone, so an infrastructure failure never reads as a model regression.
+- **Production database.** A query on a 155M-row table from **462 s to 5.2 ms** — I/O-timing forensics, then
+  a partial index, literal predicates and a keyset cursor. The same pattern later freed ~70 GB of indexes.
+- **Money that moves once.** Idempotent payouts, exactly-once under eight-way concurrency without a
+  distributed lock; quoted price equals charged price across three repositories.
 
-- [**memfusion-memory**](https://github.com/huangpengtao00-dotcom/memfusion-memory) —
-  Wiki-style memory for long-horizon agents: an explore sub-agent retrieves with read-only
-  tools, and spawn/aggregate/stop traces carry reward labels for learning when to stop.
-  / 长时程 agent 的 wiki 式记忆 + explore 子 agent;编排轨迹带 reward 标签。
+**AI operations system** &nbsp;·&nbsp; a family-owned manufacturer &nbsp;·&nbsp; designed, shipped and run alone &nbsp;·&nbsp; 2026.06 –<br>
+<sub>148k multilingual emails read · ~15k SKUs priced · 1,027-order deal ledger reconciled to the books at +0.0% · private</sub>
 
-- [**minimal-agent-loop**](https://github.com/huangpengtao00-dotcom/minimal-agent-loop) —
-  A zero-dependency Python agent loop with tool boundaries, traces, retries, circuit breaking,
-  and independent verification. Clone and run, no API key needed.
-  / 零依赖、可测试的最小 Agent 闭环,克隆即跑。
+- Mail becomes reviewable work: classified, attributed to customers, quote leads extracted. AI drafts; the
+  system never sends mail on its own.
+- Built with a fleet of coding agents working inside the architecture, acceptance criteria and merge gates I set.
 
-- [**signal-pipeline**](https://github.com/huangpengtao00-dotcom/signal-pipeline) —
-  A file-based public-signal pipeline: automated collection, templated pre-screening, and a
-  human review gate as the only path to publication.
-  / 自动采集、文件留痕、人工审核作为唯一发布关口的信号管道。
+<br>
 
-More notes and experiments: [opallagent.com](https://opallagent.com)
+### Open source
+
+- [**weldcheck**](https://github.com/huangpengtao00-dotcom/weldcheck) &nbsp;—&nbsp; One undocumented preprocessing switch moves a published watertight ratio by +62.5 pp and reverses a three-system leaderboard.
+- [**openagent-harness**](https://github.com/huangpengtao00-dotcom/openagent-harness) &nbsp;—&nbsp; Multi-model coding-agent evaluation: isolated workspaces, patch + pytest gates, a failure taxonomy, per-run cost. [Control plane →](https://github.com/huangpengtao00-dotcom/openagent-platform-backend)
+- [**restore-rsi**](https://github.com/huangpengtao00-dotcom/restore-rsi) &nbsp;—&nbsp; A self-improving loop that measures its own gate — a coin flip — and loses to a ten-line baseline.
+- [**memfusion-memory**](https://github.com/huangpengtao00-dotcom/memfusion-memory) &nbsp;—&nbsp; Wiki-style agent memory, BM25 + dense hybrid retrieval. First of 50 on one dimension of the Agent Memory Leaderboard.
+- [**judge-lab**](https://github.com/huangpengtao00-dotcom/judge-lab) &nbsp;—&nbsp; The same judge: ρ 0.99 under a pseudo-ground-truth protocol, 0.58 in the real setting.
+- [**minimal-agent-loop**](https://github.com/huangpengtao00-dotcom/minimal-agent-loop) &nbsp;—&nbsp; A zero-dependency agent loop with tool boundaries, traces, retries and a circuit breaker.
+
+<br>
+
+<sub>Go · TypeScript · Python · PostgreSQL · Redis / Valkey · FastAPI · React · Kubernetes · trimesh · manifold3d</sub><br>
+<sub>Xiamen University, Computer Science · [opallagent.com](https://opallagent.com) · huangpengtao00@gmail.com</sub>

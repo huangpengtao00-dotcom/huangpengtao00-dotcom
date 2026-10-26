@@ -3,10 +3,10 @@
   <img alt="Opall Huang" src="assets/header-light.svg" width="100%">
 </picture>
 
-CS undergraduate at Xiamen University, class of 2028. Agent team at Meshy AI, Jul – Sep 2026.
+CS undergraduate at Xiamen University, class of 2028. Agent team at Meshy AI, Jul 2026 – present.
 
 ```
-meshy        311 merged PRs · 6 production repos · Go / TypeScript / Python
+meshy        624 merged PRs · 9 repos · Go / TypeScript / Python
 postgres     462 s → 5.2 ms on a 155M-row table · partial index 6.6 GB → 4 MB
 meshy-geo    mesh kernel for 3D-print prep, built from scratch · 4.1k lines · 12 commands
 eval         verdict layer and frontend for agent release evaluation · 60 PRs · 15k lines
@@ -23,6 +23,15 @@ weldcheck           one preprocessing flag moves STL watertight ratio 0% → 62.
 restore-rsi         a ten-line baseline beats the self-improving LLM agent
 judge-lab           same visual judge, ρ 0.99 on pseudo-GT vs 0.58 on real data · 48 tests
 memfusion-memory    agent memory · 1st of 50 on one Agent Memory Leaderboard dimension
+```
+
+Upstream
+
+```
+vllm-project/guidellm   per-turn-position metrics for multi-turn workloads (#1181) · merged
+                        clear error for non-Hugging Face tokenizer names (#1183) · merged
+apache/spark            star arguments in pivot aggregates (#59293) · in review
+                        try_make_timestamp returns NULL for out-of-range years (#59292) · in review
 ```
 
 [opallagent.com](https://opallagent.com) · huangpengtao00@gmail.com
